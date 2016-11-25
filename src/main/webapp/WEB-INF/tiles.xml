@@ -1,0 +1,174 @@
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Define -->
+	<definition name="definition" template="/view/template/layout/template.jsp">
+		<put-attribute name="header" value="/view/template/layout/header.jsp" />
+		<put-attribute name="nav" value="/view/template/layout/nav.jsp" 
+			/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/view/template/layout/footer.jsp" />
+	</definition>
+	<!-- Base Define -->
+	<definition name="definition1" template="/view/template/layout/product/productpage.jsp">
+		<put-attribute name="header" value="/view/template/layout/product/header.jsp" />
+		<put-attribute name="nav" value="/view/template/layout/product/nav.jsp" 
+			/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/view/template/layout/product/footer.jsp" />
+	</definition>
+	<!-- Base Define -->
+	<definition name="definition2" template="/view/template/layout/home/template.jsp">
+		<put-attribute name="header" value="/view/template/layout/home/header.jsp" />
+		<put-attribute name="nav" value="/view/template/layout/home/nav.jsp" />
+		<put-attribute name="slide" value="/view/template/layout/home/slide.jsp" />
+		<put-attribute name="flippage" value="/view/template/layout/home/flippage.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/view/template/layout/home/footer.jsp" />
+	</definition>
+	<!-- Base Define -->
+	<definition name="definition3" template="/view/template/layout/Cart/cartpage.jsp">
+		<put-attribute name="header" value="/view/template/layout/Cart/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/view/template/layout/Cart/footer.jsp" />
+	</definition>
+		<!-- Base Define -->
+	<definition name="definition4" template="/view/template/layout/login/loginpage.jsp">
+		<put-attribute name="header" value="/view/template/layout/login/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/view/template/layout/login/footer.jsp" />
+	</definition>
+		<!-- Base Define -->
+	<definition name="definition5" template="/view/template/layout/Admin/admin.jsp">
+		<put-attribute name="navbar" value="/view/template/layout/Admin/navbar.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- EXTENDS PRODUCT -->
+	<definition name="product" extends="definition1">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/view/product/product.jsp" />
+	</definition>
+	
+	<definition name="productlocation" extends="definition1">
+		<put-attribute name="title" value="Home Page" /> 
+		<put-attribute name="body" value="/view/product/productlocation.jsp" />
+	</definition>
+ <definition name="productsup" extends="definition1">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/view/product/productsup.jsp" />
+	</definition>			
+<definition name="product-detail" extends="definition1">
+		<put-attribute name="title" value="Detail Page" /> 
+		<put-attribute name="body" value="/view/product-detail/product-detail.jsp" />
+</definition>
+<definition name="pkdetail" extends="definition1">
+		<put-attribute name="title" value="Detail Page" /> 
+		<put-attribute name="body" value="/view/product-detail/pkdetail.jsp" />
+</definition>
+<definition name="tabletdetail" extends="definition1">
+		<put-attribute name="title" value="Detail Page" /> 
+		<put-attribute name="body" value="/view/product-detail/tabletdetail.jsp" />
+</definition>
+<definition name="index" extends="definition2">
+		<put-attribute name="title" value="Home Page" /> 
+		<put-attribute name="body" value="/view/product/index.jsp" />
+</definition>
+	<!-- EXTENDS CART-->
+	<definition name="phonecart" extends="definition3">
+		<put-attribute name="title" value="Cart Page" /> 
+		<put-attribute name="body" value="/view/cart/phonecart.jsp" />
+</definition>
+<definition name="checkout" extends="definition3">
+		<put-attribute name="title" value="Checkout Page" /> 
+		<put-attribute name="body" value="/view/cart/checkout.jsp" />
+</definition>
+<definition name="order" extends="definition3">
+		<put-attribute name="title" value="Checkout Page" /> 
+		<put-attribute name="body" value="/view/cart/order.jsp" />
+</definition>
+<definition name="thankyou" extends="definition3">
+		<put-attribute name="title" value="Checkout Page" /> 
+		<put-attribute name="body" value="/view/cart/thankyou.jsp" />
+</definition>
+<!-- EXTENDS ADMIN-->
+<definition name="addnewproduct" extends="definition3">
+		<put-attribute name="title" value="Checkout Page" /> 
+		<put-attribute name="body" value="/view/admin/addnewproduct.jsp" />
+</definition>
+<definition name="listproduct" extends="definition3">
+		<put-attribute name="title" value="Checkout Page" /> 
+		<put-attribute name="body" value="/view/admin/listproduct.jsp" />
+</definition>
+<definition name="admin" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/admin.jsp" />
+</definition>
+<definition name="addnewproduct" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/addnewproduct.jsp" />
+</definition>
+<definition name="orderpage" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/orderpage.jsp" />
+</definition>
+<definition name="detailorder" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/detailorder.jsp" />
+</definition>
+<definition name="customer" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/customer.jsp" />
+</definition>
+<definition name="editproduct" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/editproduct.jsp" />
+</definition>
+<definition name="editcustomer" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/editcustomer.jsp" />
+</definition>
+<definition name="editeorderpage" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/editeorderpage.jsp" />
+</definition>
+<definition name="listcategory" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/listcategory.jsp" />
+</definition>
+<definition name="editcategory" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/editcategory.jsp" />
+</definition>
+<definition name="addcategory" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/addcategory.jsp" />
+</definition>
+<definition name="listsupply" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/listsupply.jsp" />
+</definition>
+<definition name="addsupply" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/addsupply.jsp" />
+</definition>
+<definition name="editsupply" extends="definition5">
+		<put-attribute name="title" value="Admin Page" /> 
+		<put-attribute name="body" value="/view/admin/editsupply.jsp" />
+</definition>
+<!-- EXTENDS ACCOUNT-->
+<definition name="login" extends="definition4">
+		<put-attribute name="title" value="Login Page" /> 
+		<put-attribute name="body" value="/view/login/login.jsp" />
+</definition>
+<definition name="registration" extends="definition4">
+		<put-attribute name="title" value="Register Page" /> 
+		<put-attribute name="body" value="/view/login/registration.jsp" />
+</definition>
+<definition name="welcome" extends="definition4">
+		<put-attribute name="title" value="Register Page" /> 
+		<put-attribute name="body" value="/view/login/welcome.jsp" />
+</definition>
+</tiles-definitions>
